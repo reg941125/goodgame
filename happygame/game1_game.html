@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>說好的第一關</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            .center{
+                text-align: center;
+                border-style: none;
+                width: auto;
+                padding: 15px;
+                background-color:rgba(255, 255, 255, 0.7);
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .left{
+                border-style: none;
+                width: auto;
+                padding: 15px;
+                background-color:rgba(255, 255, 255, 0.7);
+                margin-left: 30%;
+                margin-right: 20%;
+            }
+            body{
+                background-color: rgba(0, 0, 0, .6);
+                background-image: url("game1_background.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            @font-face {
+            font-family: noto-medium;
+            src: url(Noto_Sans_TC/NotoSansTC-Medium.otf);
+            }
+            @font-face {
+                font-family: noto-bold;
+                src: url(Noto_Sans_TC/NotoSansTC-Bold.otf);
+            }
+        </style>
+    </head>
+    <script type="text/javascript">
+        var time=0;
+        function load(){
+            document.getElementById("send").click
+        }
+        function send(){
+            if(document.getElementById("in").value == "happy spring"){
+                alert("恭喜 正確答案");
+                alert("你得到的通關密碼是:cong    p.s.請記好喔喔喔")
+                window.location.href="game_loby.html"
+            }else if(time==0){
+                alert("ㄟ再加把勁兒，答案是錯的ㄛㄛㄛ");
+                time++;
+            }else if(time==1){
+                alert("這樣都解不出來嗎")
+                time++;
+            }else{
+                alert("這我幼稚園就會了，可以認真一點嗎")
+            }
+        }
+    </script>
+    <body onload="load()">
+        <div style="height: 300px;"></div>
+        <div class="center" style="font-size: 20px;font-family: noto-medium;">
+            WA，怎麼辦，那個該死的駭客居然把所有東西都鎖住了
+            <br>
+            阿還好，春遊的資料夾還在
+            <br>
+            什麼鬼，那該死的駭客把我的資料夾鎖住了
+            <br>
+            密碼居然是我們的春遊名
+            <br>
+            阿名字是他們取的，我怎麼會知道
+            <s>ㄏ，不要打我</s><br>
+            嗯?他有留給我提示ㄟ
+            <br>
+            Caesar cipher ， kdssb vsulqj ， 3
+            <br>
+            hmmm...，看起來好像跟某種加密有關
+            <br>
+            <br>
+        </div>
+        <div style="font-size: 20px;font-family: noto-medium;margin-left: 20%;margin-right: 20%;background-color: rgba(255, 255, 255, 0.7);text-align: center;">
+            請輸入答案：
+        </div>
+        <div style="width: 300px;margin-left: 45%">
+            <input type = "text" id = "in"> 
+            <br>
+            <button id="send" onclick="send()">送出答案</button>
+        </div>
+        <div style="height: 200px;"></div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聽說是第三關</title>
+    <style>
+        .center{
+            text-align: center;
+            border-style: none;
+            width: auto;
+            padding: 15px;
+            background-color:rgba(255, 255, 255, 0.7);
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        body{
+            background-color: rgba(0, 0, 0, .6);
+            background-image: url("game3_background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        @font-face {
+        font-family: noto-medium;
+        src: url(Noto_Sans_TC/NotoSansTC-Medium.otf);
+        }
+        @font-face {
+            font-family: noto-bold;
+            src: url(Noto_Sans_TC/NotoSansTC-Bold.otf);
+        }
+    </style>
+</head>
+<script>
+    var time = 0
+    function send(){
+        if(document.getElementById("A").value=="D" && document.getElementById("B").value=="A" && document.getElementById("C").value=="B" && document.getElementById("D").value=="C"){
+            alert("恭喜答對")
+            alert("你的密碼是：ate p.s.真的要記好喔 ㄎㄎ")
+            window.location.href="game_loby.html"
+        }else if(time == 0){
+            alert("在想一下")
+            time++
+        }else{
+            alert("我沒梗了 加油8")
+        }
+    }
+</script>
+<body>
+    <div class="center" style="margin-top: 200px;text-align: left;padding-left: 200px;font-family: noto-medium;font-size: 20px;">
+        甲乙丙丁四人喜歡的運動不同，而且每人都只做固定一種運動；
+        <br>
+		已知，籃球場只休星期一，
+        <br>
+		羽球場只休星期二，桌球場只休星期四，
+		<br>
+        游泳池則休星期二四六；
+		<br>
+        甲：『今天我要去運動，不然明天沒得去。』
+		<br>
+        乙：『今明兩天我都會去運動。』
+		<br>
+        丙：『今天我要去運動，前天我也有去。』
+		<br>
+        丁：『從這個星期一到今天，我每天都有去運動。』
+		<br>
+        請問，四人說話的這天是星期幾？四人各自做什麼運動呢？
+    </div>
+    <div class="center">
+        <select id="A">
+            <option value="">甲</option>
+            <option value="A">籃球</option>
+            <option value="B">羽球</option>
+            <option value="C">桌球</option>
+            <option value="D">游泳</option>
+        </select>
+        <select id="B">
+            <option value="">乙</option>
+            <option value="A">籃球</option>
+            <option value="B">羽球</option>
+            <option value="C">桌球</option>
+            <option value="D">游泳</option>
+        </select>
+        <select id="C">
+            <option value="">丙</option>
+            <option value="A">籃球</option>
+            <option value="B">羽球</option>
+            <option value="C">桌球</option>
+            <option value="D">游泳</option>
+        </select>
+        <select id="D">
+            <option value="">丁</option>
+            <option value="A">籃球</option>
+            <option value="B">羽球</option>
+            <option value="C">桌球</option>
+            <option value="D">游泳</option>
+        </select>
+        <br>
+        <button onclick="send()">送出答案</button>
+    </div>
+</body>
+</html>
