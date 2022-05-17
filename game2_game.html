@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可惡要跑關</title>
+    <style>
+        .center{
+            text-align: center;
+            border-style: none;
+            width: auto;
+            padding: 15px;
+            background-color:rgba(255, 255, 255, 0.7);
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        body{
+            background-color: rgba(0, 0, 0, .6);
+            background-image: url("game2_background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        @font-face {
+        font-family: noto-medium;
+        src: url(Noto_Sans_TC/NotoSansTC-Medium.otf);
+        }
+        @font-face {
+            font-family: noto-bold;
+            src: url(Noto_Sans_TC/NotoSansTC-Bold.otf);
+        }
+    </style>
+</head>
+<script>
+    var time = 0;
+    function send(){
+        if(document.getElementById("in").value == "youdian"){
+            alert("好強 這樣都會嗎")
+            alert("這是你的密碼：ratul p.s.一樣要記好喔喔")
+            window.location.href="game_loby.html"
+        }else if(time==0){
+            alert("再加把勁")
+            time++;
+        }else if(time==1){
+            alert("有種方法叫查資料")
+            time++;
+        }else{
+            alert("你是真的用猜的嗎")
+        }
+    }
+</script>
+<body>
+    <div style="height: 300px;"></div>
+    <div class="center" style="font-size: 20px;font-family: noto-medium;">
+        痾痾痾
+        <br>
+        怎麼辦
+        <br>
+        跑關需要基本資料
+        <br>
+        可惡 我才不要自己打
+        <br>
+        一定要把資料夾解鎖！！！
+    </div>
+    <div class="center" style="margin-top: 10px">
+        <img src="Pigpen_cipher_key.png">
+        <br>
+        <img src="pigpen_cipher_code.jpg">
+        <br>
+        中提示：密碼是小寫的喔喔喔
+        <br>
+        小提示：pigpen
+    </div>
+    </div>
+        <div style="width: 300px;margin-left: 45%">
+        <input type = "text" id = "in"> 
+        <br>
+        <button id="send" onclick="send()">送出答案</button>
+    </div>
+    <div style="height: 200px;"
+</body>
+</html>
